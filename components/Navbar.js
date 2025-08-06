@@ -8,7 +8,17 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md p-4">
       <div className="flex items-center justify-between">
-        <div className="text-xl font-bold">Centro Cristiano Agape</div>
+        {/* Logo and Text */}
+        <a href="/" className="flex items-center space-x-3">
+          <img
+            src="/assets/logo-icon.png"
+            alt="Centro Cristiano Agape Logo"
+            className="h-10 w-auto"
+          />
+          <span className="text-xl sm:text-2xl font-semibold text-gray-800 whitespace-nowrap">
+            Centro Cristiano Agape
+          </span>
+        </a>
 
         {/* Hamburger Icon */}
         <button
