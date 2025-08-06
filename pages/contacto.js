@@ -6,7 +6,7 @@ export default function Contacto() {
   return (
     <>
       <Head>
-        <title>Contacto - Centro Cristiano Ágape</title>
+        <title>Contacto - Centro Cristiano Agape</title>
       </Head>
 
       <Navbar />

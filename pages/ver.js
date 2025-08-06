@@ -6,7 +6,7 @@ export default function Ver() {
   return (
     <>
       <Head>
-        <title>Ver - Centro Cristiano Ágape</title>
+        <title>Ver - Centro Cristiano Agape</title>
       </Head>
 
       <Navbar />

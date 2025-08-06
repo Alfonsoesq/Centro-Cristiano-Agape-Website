@@ -6,7 +6,7 @@ export default function Ofrendar() {
   return (
     <>
       <Head>
-        <title>Ofrendar - Centro Cristiano Ágape</title>
+        <title>Ofrendar - Centro Cristiano Agape</title>
       </Head>
 
       <Navbar />

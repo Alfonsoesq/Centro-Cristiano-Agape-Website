@@ -6,7 +6,7 @@ export default function Visitar() {
   return (
     <>
       <Head>
-        <title>Visitar - Centro Cristiano Ágape</title>
+        <title>Visitar - Centro Cristiano Agape</title>
       </Head>
 
       <Navbar />

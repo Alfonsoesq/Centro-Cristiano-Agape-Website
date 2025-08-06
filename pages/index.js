@@ -7,13 +7,13 @@ export default function Home() {
     <>
       <Head>
         <title>Centro Cristiano Ágape</title>
-        <meta name="description" content="Bienvenido a Centro Cristiano Ágape" />
+        <meta name="description" content="Bienvenido a Centro Cristiano Agape" />
       </Head>
 
       <Navbar />
 
       <main className="text-center px-6 py-20 bg-gray-100">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">¡Bienvenido a Centro Cristiano Ágape!</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">¡Bienvenido a Centro Cristiano Agape!</h1>
         <p className="text-lg md:text-xl mb-8">Un lugar donde Dios transforma vidas.</p>
         <div className="flex justify-center gap-4">
           <a href="/visitar" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded">Planifica tu visita</a>
