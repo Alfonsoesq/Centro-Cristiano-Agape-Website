@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Centro Cristiano Ágape</title>
+        <title>Centro Cristiano Agape</title>
         <meta name="description" content="Bienvenido a Centro Cristiano Agape" />
       </Head>
 
