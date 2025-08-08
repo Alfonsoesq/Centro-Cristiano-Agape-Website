@@ -19,7 +19,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover video-focus"
           poster="/videos/hero-poster.jpg" // optional poster image
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
