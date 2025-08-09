@@ -14,7 +14,7 @@ export default function HeroCarousel({ showEventSlide = true }) {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        autoplay={{ delay: 8000, disableOnInteraction: true }}
+        autoplay={{ delay: 44000, disableOnInteraction: false }}
         pagination={{
           el: '.swiper-pagination',     // <-- explicitly target this element
           clickable: true,

@@ -47,3 +47,8 @@
   opacity: 1 !important;
   transform: scale(1.2);
 }
+@media (hover: none) {
+  .swiper-pagination {
+    opacity: 1 !important;
+  }
+}
