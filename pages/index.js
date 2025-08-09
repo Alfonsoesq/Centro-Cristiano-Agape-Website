@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
 
       {/* Replace static video section with the HeroCarousel */}
-      <section className="relative text-center h-[70vh] overflow-hidden">
+      <section className="relative text-center h-[70vh]">
         <HeroCarousel showEventSlide={true} />
       </section>
 

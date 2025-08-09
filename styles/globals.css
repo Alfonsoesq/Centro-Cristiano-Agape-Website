@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 👇 Add this at the bottom */
+/* 👇 Video focus */
 .video-focus {
   object-position: center center; /* mobile default */
 }
@@ -11,4 +11,39 @@
   .video-focus {
     object-position: 5% center; /* desktop focus shift */
   }
+}
+
+/* === Swiper Pagination Styles === */
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 12px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  text-align: center !important;
+  z-index: 50 !important;
+  opacity: 0; /* hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+/* Show dots when hovering over carousel */
+.swiper:hover .swiper-pagination {
+  opacity: 1;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: white !important;
+  opacity: 0.6 !important;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  margin: 0 4px !important;
+}
+
+/* Active dot styling */
+.swiper-pagination-bullet-active {
+  background: #2563eb !important; /* Tailwind blue-600 */
+  opacity: 1 !important;
+  transform: scale(1.2);
 }
