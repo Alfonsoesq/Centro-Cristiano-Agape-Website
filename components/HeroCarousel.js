@@ -16,12 +16,12 @@ export default function HeroCarousel({ showEventSlide = true }) {
         }}
         autoplay={{ delay: 44000, disableOnInteraction: false }}
         pagination={{
-          el: '.swiper-pagination',     // <-- explicitly target this element
+          el: '.swiper-pagination', // explicit pagination container
           clickable: true,
           dynamicBullets: true,
         }}
         loop={true}
-        className="h-full swiper"       // ensure `.swiper:hover` works
+        className="h-full swiper" // ensure `.swiper:hover` works
       >
         {/* Slide 1 */}
         <SwiperSlide>
@@ -42,9 +42,25 @@ export default function HeroCarousel({ showEventSlide = true }) {
               <h1 className="text-4xl md:text-6xl font-bold drop-shadow-md mb-4 text-center">
                 ¡Bienvenidos a Centro Cristiano Agape!
               </h1>
-              <p className="text-lg md:text-xl drop-shadow-md text-center max-w-2xl">
+              <p className="text-lg md:text-xl drop-shadow-md text-center max-w-2xl mb-8">
                 Un lugar donde Dios transforma vidas.
               </p>
+
+              {/* Added buttons below text */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/visitar"
+                  className="bg-white text-blue-600 px-6 py-3 rounded shadow hover:bg-gray-100 transition text-center"
+                >
+                  Planifica tu visita
+                </a>
+                <a
+                  href="/ver"
+                  className="bg-blue-900 text-white px-6 py-3 rounded shadow hover:bg-blue-800 transition text-center"
+                >
+                  Ver en línea
+                </a>
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -87,7 +103,7 @@ export default function HeroCarousel({ showEventSlide = true }) {
           </SwiperSlide>
         )}
 
-        {/* Explicit pagination element - this ensures the element exists for Swiper to attach to */}
+        {/* Explicit pagination element */}
         <div className="swiper-pagination" />
       </Swiper>
     </div>
