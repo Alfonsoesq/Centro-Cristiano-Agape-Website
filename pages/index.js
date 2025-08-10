@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import HeroCarousel from '../components/HeroCarousel'; // Import the carousel component
 import CTASection from '../components/CTASection'; 
 import AboutUsSection from '../components/AboutUsSection';
+import TestimonialsSection from '../components/TestimonialsSection';
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
       <CTASection /> {/* ✅ CTA below the carousel */}
 
       <AboutUsSection />
+
+      <TestimonialsSection />
 
       {/* Featured message section */}
       <section className="py-20 px-6 bg-white text-center max-w-3xl mx-auto rounded-lg shadow-md mt-12">
