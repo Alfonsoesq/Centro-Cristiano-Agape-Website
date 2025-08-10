@@ -46,7 +46,7 @@ export default function HeroCarousel({ showEventSlide = true }) {
                 Un lugar donde Dios transforma vidas.
               </p>
 
-              {/* Added buttons below text */}
+              {/* Buttons below welcome text */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/visitar"

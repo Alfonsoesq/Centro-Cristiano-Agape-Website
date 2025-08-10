@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import HeroCarousel from '../components/HeroCarousel'; // Import the carousel component
+import CTASection from '../components/CTASection'; 
 
 export default function Home() {
   return (
@@ -13,12 +14,14 @@ export default function Home() {
 
       <Navbar />
 
-      {/* Replace static video section with the HeroCarousel */}
+      {/* Hero carousel replaces previous video section */}
       <section className="relative text-center h-[70vh]">
         <HeroCarousel showEventSlide={true} />
       </section>
 
-      {/* Keep the rest of your page content as-is */}
+      <CTASection /> {/* ✅ CTA below the carousel */}
+
+      {/* Featured message section */}
       <section className="py-20 px-6 bg-white text-center max-w-3xl mx-auto rounded-lg shadow-md mt-12">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">Mensaje destacado</h2>
         <p className="mb-6 italic text-gray-700">"Fe que mueve montañas" - Pr. Sergio</p>
