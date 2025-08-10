@@ -49,7 +49,7 @@ export default function AboutUsSection() {
         <div className="text-center md:text-left">
           <h2 className="text-3xl font-bold mb-4">Conoce más sobre nosotros</h2>
           <p className="text-lg mb-6">
-            En Centro Cristiano Ágape, existimos para amar a Dios y a las personas.
+            En Centro Cristiano Agape, existimos para amar a Dios y a las personas.
             Nuestra misión es compartir el mensaje de Jesucristo, servir a nuestra comunidad,
             y crecer juntos en fe y propósito.
           </p>
