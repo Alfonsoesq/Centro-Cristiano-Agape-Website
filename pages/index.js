@@ -25,7 +25,7 @@ export default function Home() {
 
       <AboutUsSection />
 
-      <TestimonialsSection /> {/* Testimonials section */}
+      <TestimonialsSection /> {/* Testimonials section! */}
 
       {/* Featured message section */}
       <section className="py-20 px-6 bg-white text-center max-w-3xl mx-auto rounded-lg shadow-md mt-12">
