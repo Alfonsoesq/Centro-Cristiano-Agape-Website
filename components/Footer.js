@@ -97,7 +97,7 @@ export default function Footer() {
 
           <h3 className="font-semibold text-lg mb-2">Nuestra Misión</h3>
           <p className="text-sm text-gray-600">
-            Centro Cristiano Ágape busca impactar vidas a través del amor de
+            Centro Cristiano Agape busca impactar vidas a través del amor de
             Cristo, la enseñanza bíblica y la comunidad.
           </p>
         </div>
