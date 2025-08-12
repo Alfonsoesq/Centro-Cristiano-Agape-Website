@@ -1,9 +1,20 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const router = useRouter();
+  const currentPath = router.pathname;
+
+  const navLinks = [
+    { href: "/", label: "Inicio" },
+    { href: "/visitar", label: "Visitar" },
+    { href: "/ver", label: "Ver" },
+    { href: "/ofrendar", label: "Ofrendar" },
+    { href: "/contacto", label: "Contacto" },
+  ];
 
   return (
     <nav className="bg-white shadow-md p-4">
@@ -53,22 +64,39 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 font-medium">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/visitar">Visitar</a></li>
-          <li><a href="/ver">Ver</a></li>
-          <li><a href="/ofrendar">Ofrendar</a></li>
-          <li><a href="/contacto">Contacto</a></li>
+          {navLinks.map(({ href, label }) => {
+            const isActive = currentPath === href;
+            return (
+              <li key={href}>
+                <a
+                  href={href}
+                  className={`relative group text-gray-800 hover:text-blue-600 transition
+                    ${isActive ? "text-blue-600" : ""}`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {label}
+                  <span
+                    className={`absolute left-0 bottom-0 h-0.5 bg-blue-600 transition-all duration-300 ease-in-out
+                      group-hover:w-full
+                      ${isActive ? "w-full" : "w-0"}`}
+                  ></span>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="mt-4 flex flex-col gap-4 md:hidden font-medium">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/visitar">Visitar</a></li>
-          <li><a href="/ver">Ver</a></li>
-          <li><a href="/ofrendar">Ofrendar</a></li>
-          <li><a href="/contacto">Contacto</a></li>
+          {navLinks.map(({ href, label }) => (
+            <li key={href}>
+              <a href={href} className="text-gray-800 hover:text-blue-600 transition">
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       )}
     </nav>
