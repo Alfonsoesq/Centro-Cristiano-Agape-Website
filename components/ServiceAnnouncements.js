@@ -4,8 +4,8 @@ import { format, nextDay, isBefore, differenceInDays } from "date-fns";
 import { es } from "date-fns/locale";
 
 // ===== CONFIG =====
-const CONGRESS_START = new Date(2025, 10, 15); // Nov 15, 2025 (month is 0-based)
-const CONGRESS_END = new Date(2025, 10, 17);
+const CONGRESS_START = new Date(2025, 10, 13); // Nov 15, 2025 (month is 0-based)
+const CONGRESS_END = new Date(2025, 10, 16);
 const ANNOUNCE_DAYS_BEFORE = 90; // Change to tweak when Congress mode starts
 
 const WEDNESDAY_TIME = "19:00"; // 7:00 PM
@@ -47,7 +47,7 @@ export default function ServiceAnnouncements() {
         {mode === "services" && (
           <>
             <h2 className="text-2xl font-bold text-center mb-6">
-              📅 This Week at Agape
+              📅 Esta semana en Centro Cristiano Agape
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
               {nextServices.map((service, idx) => (
@@ -56,16 +56,16 @@ export default function ServiceAnnouncements() {
                   className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center"
                 >
                   <h3 className="text-xl font-semibold">
-                    {service.getDay() === 0 ? "Sunday Service" : "Wednesday Service"}
+                    {service.getDay() === 0 ? "Servicio Dominical" : "Servicio Miércoles"}
                   </h3>
                   <p className="text-gray-600">
-                    {format(service, "EEEE, MMM d • h:mm a", { locale: es })}
+                    {format(service, "EEEE, d 'de' MMMM • h:mm a", { locale: es })}
                   </p>
                   <a
-                    href="/plan-your-visit"
+                    href="/visitar"
                     className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
                   >
-                    Plan Your Visit
+                    Planifica tu visita
                   </a>
                 </div>
               ))}
@@ -76,23 +76,23 @@ export default function ServiceAnnouncements() {
         {mode === "congress" && (
           <div className="bg-yellow-100 rounded-xl shadow-md p-8 text-center">
             <h2 className="text-3xl font-bold text-yellow-900 mb-4">
-              🎉 Anniversary Congress 2025
+              🎉 Congreso Agape Guadalajara 2025
             </h2>
             <p className="text-lg text-yellow-800 mb-2">
-              {format(CONGRESS_START, "MMM d", { locale: es })} –{" "}
-              {format(CONGRESS_END, "MMM d, yyyy", { locale: es })}
+              {format(CONGRESS_START, "d 'de' MMMM", { locale: es })} –{" "}
+              {format(CONGRESS_END, "d 'de' MMMM, yyyy", { locale: es })}
             </p>
             <p className="mb-4 text-gray-700">
-              Join us for 3 days of powerful worship, word, and fellowship.
+              Únete a nosotros para 4 días de adoración poderosa, palabra y compañerismo.
             </p>
             <p className="text-lg font-semibold text-yellow-900 mb-4">
-              ⏳ {differenceInDays(CONGRESS_START, new Date())} days to go
+              ⏳ {differenceInDays(CONGRESS_START, new Date())} días para comenzar
             </p>
             <a
               href="/congress-rsvp"
               className="bg-yellow-700 text-white px-6 py-3 rounded-lg hover:bg-yellow-800 transition"
             >
-              RSVP Now
+              Regístrate ahora
             </a>
           </div>
         )}
