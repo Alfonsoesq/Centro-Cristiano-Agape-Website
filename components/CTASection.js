@@ -52,13 +52,13 @@ export default function CTASection() {
         }`}
       >
         <a
-          href="/visitanos"
+          href="/visitar"
           className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto"
         >
           Planifica tu visita
         </a>
         <a
-          href="/en-linea"
+          href="/ver"
           className="bg-yellow-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-600 transition-colors w-full sm:w-auto"
         >
           Ver en línea
