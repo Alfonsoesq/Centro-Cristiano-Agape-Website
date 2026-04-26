@@ -24,14 +24,14 @@ export default function Home() {
 
       <CTASection /> {/* ✅ CTA below the carousel */}
 
-      <AboutUsSection />
+      {/* <AboutUsSection /> */}
 
-      <TestimonialsSection /> {/* Testimonials section! */}
+      {/* <TestimonialsSection /> {/* Testimonials section! */}
 
-      <ServiceAnnouncements /> {/* Service announcements section */}
+      {/* <ServiceAnnouncements /> {/* Service announcements section */}
 
       {/* Featured message section */}
-      <section className="py-20 px-6 bg-white text-center max-w-3xl mx-auto rounded-lg shadow-md mt-12">
+      {/* <section className="py-20 px-6 bg-white text-center max-w-3xl mx-auto rounded-lg shadow-md mt-12">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">Mensaje destacado</h2>
         <p className="mb-6 italic text-gray-700">"Fe que mueve montañas" - Pr. Sergio</p>
         <a
@@ -40,7 +40,7 @@ export default function Home() {
         >
           Ver mensaje
         </a>
-      </section>
+      </section> */}
 
       <Footer />
     </>

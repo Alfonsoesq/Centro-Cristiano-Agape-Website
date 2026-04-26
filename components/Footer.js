@@ -69,8 +69,8 @@ export default function Footer() {
           <ul className="mb-6 space-y-2">
             <li><a href="/" className="hover:underline">Inicio</a></li>
             <li><a href="/visitar" className="hover:underline">Planifica tu Visita</a></li>
-            <li><a href="/eventos" className="hover:underline">Eventos</a></li>
-            <li><a href="/sermones" className="hover:underline">Sermones</a></li>
+            {/* } <li><a href="/eventos" className="hover:underline">Eventos</a></li> */}
+            {/* } <li><a href="/sermones" className="hover:underline">Sermones</a></li> */}
           </ul>
 
           <h3 className="font-semibold text-lg mb-2">Nuestra Misión</h3>

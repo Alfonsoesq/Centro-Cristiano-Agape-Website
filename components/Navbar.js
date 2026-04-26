@@ -12,8 +12,9 @@ export default function Navbar() {
     { href: "/", label: "Inicio" },
     { href: "/visitar", label: "Visitar" },
     { href: "/ver", label: "Ver" },
-    { href: "/ofrendar", label: "Ofrendar" },
     { href: "/contacto", label: "Contacto" },
+    {/* { href: "/ofrendar", label: "Ofrendar" }, */},
+    
   ];
 
   return (

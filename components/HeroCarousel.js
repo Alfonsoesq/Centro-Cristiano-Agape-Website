@@ -1,29 +1,13 @@
-import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules'; // Swiper 9+ modules
 import 'swiper/css';
-import 'swiper/css/pagination';
 
-export default function HeroCarousel({ showEventSlide = true }) {
-  const swiperRef = useRef(null);
-
+export default function HeroCarousel() {
   return (
-    <div className="relative h-[70vh]">
+    <div className="relative h-[70vh] overflow-hidden">
       <Swiper
-        modules={[Autoplay, Pagination]}
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
-        }}
-        autoplay={{ delay: 44000, disableOnInteraction: false }}
-        pagination={{
-          el: '.swiper-pagination', // explicit pagination container
-          clickable: true,
-          dynamicBullets: true,
-        }}
-        loop={true}
-        className="h-full swiper" // ensure `.swiper:hover` works
+        allowTouchMove={false} // Prevents dragging since there's only one slide
+        className="h-full"
       >
-        {/* Slide 1 */}
         <SwiperSlide>
           <div className="relative w-full h-full">
             <video
@@ -38,25 +22,30 @@ export default function HeroCarousel({ showEventSlide = true }) {
               Your browser does not support the video tag.
             </video>
 
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-6">
-              <h1 className="text-4xl md:text-6xl font-bold drop-shadow-md mb-4 text-center">
+            {/* Clean Overlay: 
+                Changed bg-black/50 to a subtle gradient. 
+                This lets the 'white' theme breathe at the top 
+                while keeping text readable at the bottom. 
+            */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/60 flex flex-col justify-center items-center text-white px-6">
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-lg mb-4 text-center">
                 ¡Bienvenidos a Centro Cristiano Agape!
               </h1>
-              <p className="text-lg md:text-xl drop-shadow-md text-center max-w-2xl mb-8">
+              <p className="text-lg md:text-xl font-light drop-shadow-md text-center max-w-2xl mb-8 opacity-90">
                 Un lugar donde Dios transforma vidas.
               </p>
 
-              {/* Buttons below welcome text */}
+              {/* Updated Pill Buttons for a modern look */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/visitar"
-                  className="bg-white text-blue-600 px-6 py-3 rounded shadow hover:bg-gray-100 transition text-center"
+                  className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold shadow-xl hover:bg-gray-100 transition-all hover:scale-105 text-center"
                 >
                   Planifica tu visita
                 </a>
                 <a
                   href="/ver"
-                  className="bg-blue-900 text-white px-6 py-3 rounded shadow hover:bg-blue-800 transition text-center"
+                  className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-xl hover:bg-blue-700 transition-all hover:scale-105 text-center"
                 >
                   Ver en línea
                 </a>
@@ -64,47 +53,6 @@ export default function HeroCarousel({ showEventSlide = true }) {
             </div>
           </div>
         </SwiperSlide>
-
-        {/* Slide 2 */}
-        <SwiperSlide>
-          <a href="/sermon/last-sermon" className="block w-full h-full relative">
-            <img
-              src="/images/sermon-thumbnail.jpg"
-              alt="Último mensaje"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-6">
-              <h2 className="text-3xl font-bold mb-2 text-center">Último Mensaje</h2>
-              <p className="text-center">“Fe que mueve montañas” - Pr. Sergio</p>
-              <button className="mt-4 bg-blue-600 px-6 py-2 rounded hover:bg-blue-700">
-                Ver mensaje
-              </button>
-            </div>
-          </a>
-        </SwiperSlide>
-
-        {/* Slide 3 (optional) */}
-        {showEventSlide && (
-          <SwiperSlide>
-            <a href="/eventos/proximo-evento" className="block w-full h-full relative">
-              <img
-                src="/images/evento-thumbnail.jpg"
-                alt="Próximo evento"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-6">
-                <h2 className="text-3xl font-bold mb-2 text-center">Próximo Evento</h2>
-                <p className="text-center">Únete a nosotros para una experiencia única</p>
-                <button className="mt-4 bg-blue-600 px-6 py-2 rounded hover:bg-blue-700">
-                  Más info
-                </button>
-              </div>
-            </a>
-          </SwiperSlide>
-        )}
-
-        {/* Explicit pagination element */}
-        <div className="swiper-pagination" />
       </Swiper>
     </div>
   );
